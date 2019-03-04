@@ -1,0 +1,9 @@
+$primary: hsl(171, 100%, 41%);
+
+.box {
+  cursor: pointer;
+
+  &.is-selected {
+    border: 1px solid $primary;
+  }
+}

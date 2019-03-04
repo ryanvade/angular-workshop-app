@@ -1,3 +1,20 @@
-<p>
-  video-list works!
-</p>
+<div class="box"
+  *ngFor="let video of videos | async"
+  (click)="clickOnVideo(video);"
+  [class.is-selected]="video.id == selected.id">
+  <article class="media">
+    <!-- <div class="media-left">
+      <figure class="image is-64x64">
+        <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+      </figure>
+    </div> -->
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>{{ video.title }}</strong> <br>
+          <small>{{ video.author }}</small>
+        </p>
+      </div>
+    </div>
+  </article>
+</div>
