@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { StatFiltersComponent } from './stat-filters.component';
+import { StatFiltersComponent } from "./stat-filters.component";
 
-describe('StatFiltersComponent', () => {
+describe("StatFiltersComponent", () => {
   let component: StatFiltersComponent;
   let fixture: ComponentFixture<StatFiltersComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StatFiltersComponent ]
-    })
-    .compileComponents();
+      declarations: [StatFiltersComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('StatFiltersComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -8,14 +8,13 @@ import { Video } from "../store/dashboard.interface";
   styleUrls: ["./video-list.component.scss"]
 })
 export class VideoListComponent implements OnInit {
-
   @Input() videos: Observable<Video[]>;
   selected: Video = null;
 
   constructor() {}
 
   ngOnInit() {
-    this.videos.subscribe((videos) => {
+    this.videos.subscribe(videos => {
       if (videos.length > 0) {
         this.selected = videos[0];
       }

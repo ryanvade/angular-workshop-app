@@ -1,6 +1,10 @@
 <ul>
-  <li *ngFor="let video of videos | async">
-    <app-video-list-item [video]="video" [selected]="selected" (select)="selectVideo(video);">
+  <li *ngFor="let video of (videos | async)">
+    <app-video-list-item
+      [video]="video"
+      [selected]="selected"
+      (select)="selectVideo(video)"
+    >
     </app-video-list-item>
   </li>
 </ul>

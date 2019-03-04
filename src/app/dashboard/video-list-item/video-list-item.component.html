@@ -1,7 +1,9 @@
-<div class="box"
-  (click)="clickOnVideo();"
-  (dblclick)="doubleClickVideo();"
-  [class.is-selected]="video.id == selected?.id">
+<div
+  class="box"
+  (click)="clickOnVideo()"
+  (dblclick)="doubleClickVideo()"
+  [class.is-selected]="video.id == selected?.id"
+>
   <article class="media">
     <!-- <div class="media-left">
       <figure class="image is-64x64">
@@ -11,7 +13,7 @@
     <div class="media-content">
       <div class="content">
         <p>
-          <strong>{{ video.title }}</strong> <br>
+          <strong>{{ video.title }}</strong> <br />
           <small>{{ video.author }}</small>
         </p>
       </div>
