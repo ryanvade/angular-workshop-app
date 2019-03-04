@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { of, Observable } from "rxjs";
-import { Video } from '../store/types';
+import { Video } from '../store/dashboard.interface';
 
 @Injectable({
   providedIn: "root"

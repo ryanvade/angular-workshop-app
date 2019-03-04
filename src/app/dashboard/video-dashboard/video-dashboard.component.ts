@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { VideoService } from "../services/video.service";
+import { Observable } from "rxjs";
+import { Video } from "../store/dashboard.interface";
 
 @Component({
   selector: 'app-video-dashboard',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoDashboardComponent implements OnInit {
 
-  constructor() { }
+  videos: Observable<Video[]>;
+
+  constructor(private service: VideoService) { }
 
   ngOnInit() {
+    this.videos = this.service.getList();
   }
 
 }
